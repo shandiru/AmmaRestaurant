@@ -224,10 +224,7 @@ const menuData = [
       }
     ]
   },
-  {
-    "category": "Starters",
-    "items": []
-  },
+
   {
     "category": "Tandoori",
     "items": [
@@ -884,77 +881,73 @@ const menuData = [
     ]
   },
   {
-    "category": " Paani Birani Combo",
-    "items": []
-  },
-  {
-    "category": "Veg Biryani",
-    "items": []
-  },
-  {
-    "category": "Chicken Biryani",
-    "items": []
-  },
-  {
-    "category": "Mutton Biryani",
-    "items": []
-  },
-  {
-    "category": "BEVERAGES",
-    "items": []
-  },
-  {
-    "category": "SOFT DRINKS 330ml",
-    "items": []
-  },
-  {
-    "category": "Original / Diet / Zero Coke",
-    "items": []
-  },
-  {
-    "category": "Pepsi",
-    "items": []
-  },
-  {
-    "category": "Fanta",
-    "items": []
-  },
-  {
-    "category": "7up / Sprite",
-    "items": []
-  },
-  {
-    "category": "Schweppes  200ml",
-    "items": []
-  },
-  {
-    "category": "Tonic Water / Soda Water / Tomato Juice / Orange Juice",
-    "items": []
-  },
-  {
-    "category": "Strathmore 330ml",
-    "items": []
-  },
-  {
-    "category": "Still Water / Sparkling Water",
-    "items": []
-  },
-  {
-    "category": "CANS 300ml",
-    "items": []
-  },
-  {
-    "category": "Necto /  Limca / Thums Up / Ginger Beer",
-    "items": []
-  },
-  {
-    "category": "Srilankan Bottle Drinks 400ml",
-    "items": []
-  },
-  {
-    "category": "Necto / Orange Barley / Cream Soda / Ginger Beer",
-    "items": []
-  },
+  "category": "Paanaai Biryani Combo",
+  "items": [
+    {
+      "title": "Veg Biryani",
+      "price": "£27.99 / £39.99",
+      "tags": "Paneer 65 + Dalcha + Raita + Sweet | 4 Person / 6 Person"
+    },
+    {
+      "title": "Chicken Biryani",
+      "price": "£34.99 / £45.99",
+      "tags": "Chicken 65 + Dalcha + Raita + Sweet | 4 Person / 6 Person"
+    },
+    {
+      "title": "Mutton Biryani",
+      "price": "£39.99 / £55.99",
+      "tags": "Chicken 65 + Dalcha + Raita + Sweet | 4 Person / 6 Person"
+    }
+  ]
+}
+,
+
+ {
+  "category": "Beverages",
+  "items": [
+    {
+      "title": "Original / Diet / Zero Coke",
+      "price": "£3.99",
+      "tags": "330ml"
+    },
+    {
+      "title": "Pepsi",
+      "price": "£3.99",
+      "tags": "330ml"
+    },
+    {
+      "title": "Fanta",
+      "price": "£3.99",
+      "tags": "330ml"
+    },
+    {
+      "title": "7up / Sprite",
+      "price": "£3.99",
+      "tags": "330ml"
+    },
+    {
+      "title": "Schweppes",
+      "price": "£1.99",
+      "tags": "200ml | Tonic Water / Soda Water / Tomato Juice / Orange Juice"
+    },
+    {
+      "title": "Strathmore",
+      "price": "£1.99",
+      "tags": "330ml | Still Water / Sparkling Water"
+    },
+    {
+      "title": "Cans",
+      "price": "£1.99",
+      "tags": "300ml | Necto / Limca / Thums Up / Ginger Beer"
+    },
+    {
+      "title": "Srilankan Bottle Drinks",
+      "price": "£3.99",
+      "tags": "400ml | Necto / Orange Barley / Cream Soda / Ginger Beer"
+    }
+  ]
+}
+,
   {
     "category": "Cold",
     "items": [
