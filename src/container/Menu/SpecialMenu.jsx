@@ -5,8 +5,8 @@ import { images } from '../../constants';
 import './SpecialMenu.css';
 
 const SpecialMenu = () => {
-  const [leftCategory, setLeftCategory] = useState('Wine & Beer');
-  const [rightCategory, setRightCategory] = useState('Cocktails');
+  const [leftCategory, setLeftCategory] = useState('Tiffin');
+  const [rightCategory, setRightCategory] = useState('Dosa Veg');
 
   const leftData = menuData.find((c) => c.category === leftCategory);
   const rightData = menuData.find((c) => c.category === rightCategory);
