@@ -1,154 +1,157 @@
-.app__specialMenu {
-    flex-direction: column;
-    background: var(--color-black);
-}
-
-.app__specialMenu-title {
-    margin-bottom: 2rem;
-    text-align: center;
-}
-
-.app__specialMenu-menu {
-    width: 100%;
-    margin: 2rem 0;
-
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: row;
-}
-
-.app__specialMenu-menu_heading {
-    font-family: var(--font-base);
-    font-weight: 600;
-    font-size: 45px;
-    line-height: 58.5px;
-    letter-spacing: 0.04em;
-    color: var(--color-white);
-}
-
-.app__specialMenu-menu_wine,
-.app__specialMenu-menu_cocktails {
-    flex: 1;
-    width: 100%;
-    flex-direction: column;
-}
-
-.app__specialMenu-menu_img {
-    width: 410px;
-    margin: 0 2rem;
-}
-
-.app__specialMenu-menu_img img {
-    width: 100%;
-    height: auto;
-}
-
-.app__specialMenu_menu_items {
-    display: flex;
-    flex-direction: column;
-
-    margin: 2rem 0;
-    width: 100%;
-}
-
-@media screen and (min-width: 2000px) {
-    .app__specialMenu-menu_img {
-        width: 650px;
-    }
-
-    .app__specialMenu-menu_img img {
-        height: 920px;
-    }
-}
-
-@media screen and (max-width: 1150px) {
-    .app__specialMenu-menu {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-    }
-
-    .app__specialMenu-menu_img {
-        margin: 3rem 0;
-    }
-}
-
-@media screen and (max-width: 650px) {
-    .app__specialMenu-menu_img {
-        width: 100%;
-    }
-
-    .app__specialMenu-menu_heading {
-        font-size: 35px;
-        line-height: 48.5px;
-    }
-}
-
-.category-selector {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-  margin-bottom: 2rem;
-}
-
-/* Hide default checkbox */
-.category-checkbox input {
-  display: none;
-}
-
-/* Label styling */
-.category-checkbox {
-  position: relative;
-  padding-left: 34px;
-  cursor: pointer;
+/* =========================
+   SECTION BASE
+========================= */
+.delicious-menu {
+  background: #0b0b0b;
+  padding: 5rem 2rem;
+  color: #ffffff;
   font-family: var(--font-base);
-  font-size: 16px;
-  color: var(--color-white);
-  user-select: none;
+}
+
+/* =========================
+   HEADER
+========================= */
+.menu-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.menu-main-title {
+  font-size: 56px;
+  font-weight: 500;
+  margin-top: 1rem;
+}
+
+/* =========================
+   CATEGORY NAV (TEXT STYLE)
+========================= */
+.menu-category-nav {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  margin-bottom: 4rem;
+  flex-wrap: wrap;
+}
+
+.menu-category-item {
+  font-size: 15px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  position: relative;
+  padding-bottom: 6px;
   transition: color 0.3s ease;
 }
 
-/* Custom checkbox box */
-.category-checkbox .checkmark {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  height: 20px;
-  width: 20px;
-  border: 2px solid var(--color-golden);
-  border-radius: 4px;
-  transition: all 0.3s ease;
+.menu-category-item:hover {
+  color: #cfa670;
 }
 
-/* Checked state */
-.category-checkbox input:checked + .checkmark {
-  background-color: var(--color-golden);
-  border-color: var(--color-golden);
+.menu-category-item.active {
+  color: #cfa670;
 }
 
-/* Check icon */
-.category-checkbox .checkmark::after {
+.menu-category-item.active::after {
   content: "";
   position: absolute;
-  display: none;
-  left: 6px;
-  top: 2px;
-  width: 6px;
-  height: 12px;
-  border: solid var(--color-black);
-  border-width: 0 2px 2px 0;
-  transform: rotate(45deg);
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: #cfa670;
 }
 
-/* Show check icon when checked */
-.category-checkbox input:checked + .checkmark::after {
-  display: block;
+/* =========================
+   MENU COLUMNS
+========================= */
+.menu-columns {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* Hover effect */
-.category-checkbox:hover {
-  color: var(--color-golden);
+.menu-divider {
+  width: 1px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* =========================
+   MENU ROW
+========================= */
+.menu-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.menu-img {
+  width: 70px;
+  height: 70px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* Info */
+.menu-info {
+  max-width: 240px;
+}
+
+.menu-title-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.menu-title-row h3 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.menu-badge {
+  background: #cfa670;
+  color: #000;
+  font-size: 11px;
+  padding: 2px 6px;
+}
+
+/* Description */
+.menu-desc {
+  font-size: 13px;
+  opacity: 0.7;
+  margin-top: 4px;
+}
+
+/* Line */
+.menu-line {
+  flex: 1;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* Price */
+.menu-price {
+  font-size: 18px;
+  color: #cfa670;
+  white-space: nowrap;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 900px) {
+  .menu-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-divider {
+    display: none;
+  }
+
+  .menu-main-title {
+    font-size: 40px;
+  }
 }
