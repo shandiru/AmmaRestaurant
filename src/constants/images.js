@@ -5,6 +5,21 @@ import gallery01 from '../assets/gallery01.png';
 import gallery02 from '../assets/gallery02.png';
 import gallery03 from '../assets/gallery03.png';
 import gallery04 from '../assets/gallery04.png';
+import gallery05 from '../assets/gallery05.jpeg';
+import gallery06 from '../assets/gallery06.jpeg';
+import gallery07 from '../assets/gallery07.jpeg';
+import gallery08 from '../assets/gallery08.jpeg';
+import gallery09 from '../assets/gallery09.jpeg';
+import gallery10 from '../assets/gallery10.jpeg';
+import gallery11 from '../assets/gallery11.jpeg';
+import gallery12 from '../assets/gallery12.jpeg';
+import gallery13 from '../assets/gallery13.jpeg';
+import gallery14 from '../assets/gallery14.jpeg';
+import gallery15 from '../assets/gallery15.jpeg';
+import gallery16 from '../assets/gallery16.jpeg';
+import gallery17 from '../assets/gallery17.jpeg';
+import gallery18 from '../assets/gallery18.jpeg';
+import gallery19 from '../assets/gallery19.jpeg';
 import knife from '../assets/knife.png';
 import logo from '../assets/logo.png';
 import menu from '../assets/menu.png';
@@ -29,6 +44,21 @@ export default {
   gallery02,
   gallery03,
   gallery04,
+  gallery05,
+  gallery06,
+  gallery07,
+  gallery08,
+  gallery09,
+  gallery10,
+  gallery11,
+  gallery12,
+  gallery13,
+  gallery14,
+  gallery15,
+  gallery16,
+  gallery17,
+  gallery18,
+  gallery19,
   knife,
   logo,
   menu,
