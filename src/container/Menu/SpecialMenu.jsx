@@ -10,12 +10,6 @@ const SpecialMenu = () => {
     (item) => item.category === activeCategory
   );
 
-  // Split items into two columns
-  const leftItems =
-    activeData?.items.slice(0, Math.ceil(activeData.items.length / 2)) || [];
-  const rightItems =
-    activeData?.items.slice(Math.ceil(activeData.items.length / 2)) || [];
-
   return (
     <section className="delicious-menu" id="menu">
       {/* HEADER */}
@@ -24,7 +18,7 @@ const SpecialMenu = () => {
         <h1 className="menu-main-title">Delicious Menu</h1>
       </div>
 
-      {/* CATEGORY NAVIGATION (TEXT STYLE) */}
+      {/* CATEGORY NAV */}
       <div className="menu-category-nav">
         {menuData.map((cat) => (
           <span
@@ -39,45 +33,23 @@ const SpecialMenu = () => {
         ))}
       </div>
 
-      {/* MENU CONTENT */}
-      <div className="menu-columns">
-        {/* LEFT COLUMN */}
-        <div className="menu-column">
-          {leftItems.map((item, index) => (
-            <MenuRow key={index} item={item} />
-          ))}
-        </div>
+      {/* MENU GRID */}
+      <div className="menu-card-grid">
+        {activeData?.items.map((item, index) => (
+          <div className="menu-card" key={index}>
+            <div className="menu-image-wrapper">
+              <img src={item.image} alt={item.title} />
+            </div>
 
-        {/* CENTER DIVIDER */}
-        <div className="menu-divider" />
-
-        {/* RIGHT COLUMN */}
-        <div className="menu-column">
-          {rightItems.map((item, index) => (
-            <MenuRow key={index} item={item} />
-          ))}
-        </div>
+            <div className="menu-card-footer">
+              <h3>{item.title}</h3>
+              <span className="menu-card-price">{item.price}</span>
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );
 };
-
-const MenuRow = ({ item }) => (
-  <div className="menu-row">
-    <img src={item.image} alt={item.title} className="menu-img" />
-
-    <div className="menu-info">
-      <div className="menu-title-row">
-        <h3>{item.title}</h3>
-        {item.badge && <span className="menu-badge">{item.badge}</span>}
-      </div>
-      <p className="menu-desc">{item.tags}</p>
-    </div>
-
-    <div className="menu-line" />
-
-    <span className="menu-price">{item.price}</span>
-  </div>
-);
 
 export default SpecialMenu;
