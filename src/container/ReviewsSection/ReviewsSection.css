@@ -1,0 +1,96 @@
+/* ===== SECTION ===== */
+.reviews-section {
+  background: #000;
+  color: #fff;
+  padding: 100px 0;
+  overflow: hidden;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* ===== TITLE ===== */
+.reviews-title-wrapper {
+  overflow: hidden;
+  white-space: nowrap;
+  margin-bottom: 100px;
+}
+
+.reviews-title-track {
+  display: inline-flex;
+  gap: 24px;
+  font-size: 64px;
+  font-weight: 700;
+  animation: marquee 20s linear infinite;
+}
+
+.reviews-title-track .muted {
+  color: #6b7280;
+}
+
+/* ===== MARQUEE ANIMATION ===== */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* ===== ROWS ===== */
+.reviews-row {
+  display: flex;
+  gap: 48px;
+  overflow-x: hidden;
+  padding-left: 40px;
+}
+
+.reviews-row.second {
+  margin-top: 80px;
+}
+
+/* ===== REVIEW CARD (IMAGE STYLE) ===== */
+.review-card {
+  flex-shrink: 0;
+  width: 520px;
+  background: #000;
+  border: 2px solid #fff;
+  border-radius: 40px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== CARD HEADER ===== */
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.review-header h4 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* ===== STARS ===== */
+.stars {
+  font-size: 20px;
+}
+
+.stars .on {
+  color: #facc15;
+}
+
+.stars .off {
+  color: #4b5563;
+}
+
+/* ===== TEXT ===== */
+.review-card p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #d1d5db;
+  margin: 0;
+}
