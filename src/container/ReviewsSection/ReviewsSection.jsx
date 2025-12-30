@@ -2,17 +2,15 @@ import { useEffect, useRef } from "react";
 import "./ReviewsSection.css";
 
 const row1 = [
-  { name: "Megan", stars: 3, text: "Warm welcome, good service and delicious dishes. Will come again!" },
+  { name: "William", stars: 5, text: "Delicious! It was delicious. Pure flavours, in traditional tapas. I liked that there was not a very big menu, but what was on was delicious. Everything. We were with my children, who also liked everything." },
+  { name: "Megan", stars: 3, text: "Super spontaneous reception by the staff, it really gave a warm and welcome feeling. Good service and delicious dishes, we could hardly choose. In short, we will definitely come back here more often!" },
   { name: "John", stars: 5, text: "Super spontaneous reception by the staff. Amazing experience!" },
-  { name: "Emma", stars: 5, text: "If I could give 10 stars I would. Phenomenal food!" },
-  { name: "William", stars: 5, text: "Pure flavours, cozy place, very friendly staff." },
 ];
 
 const row2 = [
-  { name: "Megan", stars: 3, text: "Nice place, warm welcome and tasty food." },
-  { name: "John", stars: 5, text: "Good service and delicious dishes. Highly recommended!" },
-  { name: "Bob", stars: 5, text: "Everything freshly prepared, great value for money!" },
-  { name: "William", stars: 5, text: "Pure flavours, cozy place, very friendly staff." },
+  { name: "Emma", stars: 5, text: "Really FANTASTIC!!! If I could give 10 stars, I would. Nice, cozy place. Very friendly staff. The food was phenomenal, especially the chicken with honey." },
+  { name: "John", stars: 5, text: "Super spontaneous reception by the staff, it really gave a warm and welcome feeling. Good service and delicious dishes, we could hardly choose. In short, we will definitely come back here more often!" },
+  { name: "Bob", stars: 5, text: "With 6 persons Saturday evening we had a delicious dinner! Everything freshly prepared, delicious, very nice service and value for money, surprising dishes. We will definitely be back!" },
 ];
 
 export default function ReviewsSection() {
@@ -34,7 +32,7 @@ export default function ReviewsSection() {
   return (
     <section className="reviews-section">
 
-      {/* ===== AUTO MOVING REVIEWS TITLE ===== */}
+      {/* ===== MOVING TITLE ===== */}
       <div className="reviews-title-wrapper">
         <div className="reviews-title-track">
           <span className="muted">REVIEWS •</span>

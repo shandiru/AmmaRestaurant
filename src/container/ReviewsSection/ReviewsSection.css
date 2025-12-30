@@ -2,7 +2,7 @@
 .reviews-section {
   background: #000;
   color: #fff;
-  padding: 100px 0;
+  padding: 120px 0;
   overflow: hidden;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
@@ -11,7 +11,7 @@
 .reviews-title-wrapper {
   overflow: hidden;
   white-space: nowrap;
-  margin-bottom: 100px;
+  margin-bottom: 120px;
 }
 
 .reviews-title-track {
@@ -26,29 +26,26 @@
   color: #6b7280;
 }
 
-/* ===== MARQUEE ANIMATION ===== */
+/* ===== MARQUEE ===== */
 @keyframes marquee {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 
 /* ===== ROWS ===== */
 .reviews-row {
   display: flex;
+  align-items: flex-start;
   gap: 48px;
   overflow-x: hidden;
-  padding-left: 40px;
+  padding: 20px 0 20px 60px;
 }
 
 .reviews-row.second {
-  margin-top: 80px;
+  margin-top: 140px;
 }
 
-/* ===== REVIEW CARD (IMAGE STYLE) ===== */
+/* ===== REVIEW CARD ===== */
 .review-card {
   flex-shrink: 0;
   width: 520px;
@@ -56,27 +53,26 @@
   border: 2px solid #fff;
   border-radius: 40px;
   padding: 32px;
-  display: flex;
-  flex-direction: column;
+  box-sizing: border-box;
 }
 
-/* ===== CARD HEADER ===== */
+/* ===== HEADER ===== */
 .review-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
 
 .review-header h4 {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 600;
   margin: 0;
 }
 
 /* ===== STARS ===== */
 .stars {
-  font-size: 20px;
+  font-size: 22px;
 }
 
 .stars .on {
@@ -90,7 +86,7 @@
 /* ===== TEXT ===== */
 .review-card p {
   font-size: 16px;
-  line-height: 1.6;
+  line-height: 1.7;
   color: #d1d5db;
   margin: 0;
 }
