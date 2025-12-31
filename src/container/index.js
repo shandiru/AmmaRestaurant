@@ -9,6 +9,7 @@ import Laurels from './Laurels/Laurels';
 import SpecialMenu from './Menu/SpecialMenu';
 import MenuCategories from './MenuCategories.jsx';
 import ReviewsSection from './ReviewsSection/ReviewsSection.jsx';
+import AboutSection from '../container/AboutSection.jsx';
 export {
   AboutUs,
   Chef,
@@ -20,5 +21,6 @@ export {
   Laurels,
   SpecialMenu,
   MenuCategories,
-  ReviewsSection
+  ReviewsSection,
+  AboutSection,
 };
