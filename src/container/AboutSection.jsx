@@ -27,8 +27,6 @@ export default function AboutScrollSection() {
 
       const rect = sectionRef.current.getBoundingClientRect();
       const vh = window.innerHeight;
-
-      // overall scroll progress
       const progress = (vh - rect.top) / vh;
 
       itemRefs.current.forEach((el, index) => {
@@ -36,33 +34,30 @@ export default function AboutScrollSection() {
 
         const p = Math.min(Math.max(progress - index, 0), 1);
 
-        const img = el.querySelector(".image");
+        const img = el.querySelector("img");
         const text = el.querySelector(".text");
 
         const isImageLeft = sections[index].imageSide === "left";
 
-        /* ========= IMAGE MOVE ========= */
+        /* ========= IMAGE (INNER PARALLAX – NO CUT) ========= */
         if (img) {
-          const moveX = isImageLeft
-            ? -p * 25 // image slides LEFT
-            : p * 25; // image slides RIGHT
-
-          img.style.transform = `translateX(${moveX}%)`;
+          const move = isImageLeft ? -p * 10 : p * 10; // very subtle
+          img.style.transform = `translateX(${move}%) scale(1.05)`;
         }
 
-        /* ========= TEXT REVEAL (OPPOSITE SIDE) ========= */
+        /* ========= TEXT (OPPOSITE SIDE REVEAL) ========= */
         if (text) {
-          const startTextX = isImageLeft ? 80 : -80;
-          const moveTextX = startTextX * (1 - p);
+          const startX = isImageLeft ? 80 : -80;
+          const moveX = startX * (1 - p);
 
           text.style.opacity = p;
-          text.style.transform = `translateX(${moveTextX}px)`;
+          text.style.transform = `translateX(${moveX}px)`;
         }
       });
     };
 
     window.addEventListener("scroll", onScroll, { passive: true });
-    onScroll(); // initial state fix
+    onScroll();
 
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -71,7 +66,7 @@ export default function AboutScrollSection() {
     <section
       ref={sectionRef}
       className="relative bg-black text-white overflow-x-hidden"
-      style={{ height: `${(sections.length + 1) * 100}vh` }}
+      style={{ height: `${sections.length * 100}vh` }}
     >
       {sections.map((item, i) => {
         const isImageLeft = item.imageSide === "left";
@@ -90,11 +85,11 @@ export default function AboutScrollSection() {
               >
                 {/* IMAGE */}
                 <div className="w-full lg:w-2/3">
-                  <div className="image rounded-[36px] border-2 border-white overflow-hidden will-change-transform">
+                  <div className="rounded-[36px] border-2 border-white overflow-hidden">
                     <img
                       src={item.image}
                       alt={item.title}
-                      className="w-full h-[70vh] object-cover"
+                      className="w-full h-[70vh] object-cover will-change-transform"
                     />
                   </div>
                 </div>
