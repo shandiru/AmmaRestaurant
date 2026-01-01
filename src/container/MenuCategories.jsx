@@ -29,8 +29,10 @@ const categories = [
 export default function MenuCategories() {
   return (
     <section className="bg-black py-20 overflow-hidden">
+
       {/* WRAPPER */}
       <div className="mx-auto max-w-[1600px] px-6">
+
         {/* GRID */}
         <div
           className="
@@ -39,17 +41,26 @@ export default function MenuCategories() {
             sm:grid-cols-2
             md:grid-cols-3
             lg:grid-cols-5
-
             gap-x-12
             gap-y-16
-
             place-items-center
           "
         >
           {categories.map((item, index) => (
             <div key={index} className="flex flex-col items-center">
+
               {/* TITLE */}
-              <h2 className="mb-8 text-[26px] font-extrabold tracking-widest text-white">
+              <h2
+                className="
+                  mb-8
+                  text-[26px]
+                  font-extrabold
+                  tracking-widest
+                  text-white
+                  font-base
+                  incline-text
+                "
+              >
                 {item.title}
               </h2>
 
@@ -79,6 +90,33 @@ export default function MenuCategories() {
           ))}
         </div>
       </div>
+
+      {/* ===== FONTS + INCLINE STYLE ===== */}
+      <style>
+        {`
+          @import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@600;700&family=Open+Sans:wght@400;500&display=swap');
+
+          :root {
+            --font-base: 'Cormorant Upright', serif;
+            --font-alt: 'Open Sans', sans-serif;
+          }
+
+          .font-base {
+            font-family: var(--font-base);
+          }
+
+          .font-alt {
+            font-family: var(--font-alt);
+          }
+
+          /* Inclined (NOT italic) */
+          .incline-text {
+            transform: skewX(-8deg);
+            display: inline-block;
+          }
+        `}
+      </style>
+
     </section>
   );
 }

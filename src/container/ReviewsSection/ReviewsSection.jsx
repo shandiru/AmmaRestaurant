@@ -36,12 +36,9 @@ export default function ReviewsSection() {
 
       {/* ===== MOVING TITLE ===== */}
       <div className="overflow-hidden whitespace-nowrap mb-20 sm:mb-28">
-        <div className="flex w-max animate-[marquee_18s_linear_infinite] text-[42px] sm:text-[64px] font-bold">
+        <div className="flex w-max animate-[marquee_18s_linear_infinite] text-[42px] sm:text-[64px] font-bold font-base incline-text">
           {[...Array(10)].map((_, i) => (
-            <span
-              key={i}
-              className={`mr-6 ${i % 2 === 0 ? "text-gray-500" : ""}`}
-            >
+            <span key={i} className={`mr-6 ${i % 2 === 0 ? "text-gray-500" : ""}`}>
               REVIEWS •
             </span>
           ))}
@@ -51,14 +48,7 @@ export default function ReviewsSection() {
       {/* ===== ROW 1 ===== */}
       <div
         ref={row1Ref}
-        className="
-          flex items-center
-          gap-10 sm:gap-14
-          px-4 sm:px-6
-          py-6
-          overflow-x-hidden
-          select-none
-        "
+        className="flex items-center gap-10 sm:gap-14 px-4 sm:px-6 py-6 overflow-x-hidden select-none"
       >
         {[...row1, ...row1].map((r, i) => (
           <ReviewPill key={`row1-${i}`} {...r} />
@@ -68,72 +58,73 @@ export default function ReviewsSection() {
       {/* ===== ROW 2 ===== */}
       <div
         ref={row2Ref}
-        className="
-          flex items-center
-          gap-10 sm:gap-14
-          px-4 sm:px-6
-          py-6
-          mt-14 sm:mt-16
-          overflow-x-hidden
-          select-none
-        "
+        className="flex items-center gap-10 sm:gap-14 px-4 sm:px-6 py-6 mt-14 sm:mt-16 overflow-x-hidden select-none"
       >
         {[...row2, ...row2].map((r, i) => (
           <ReviewPill key={`row2-${i}`} {...r} />
         ))}
       </div>
 
-      {/* ===== KEYFRAMES ===== */}
+      {/* ===== FONTS + KEYFRAMES ===== */}
       <style>
         {`
+          @import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@600;700&family=Open+Sans:wght@400;500&display=swap');
+
+          :root {
+            --font-base: 'Cormorant Upright', serif;
+            --font-alt: 'Open Sans', sans-serif;
+          }
+
+          .font-base {
+            font-family: var(--font-base);
+          }
+
+          .font-alt {
+            font-family: var(--font-alt);
+          }
+
+          /* Inclined effect (not italic) */
+          .incline-text {
+            transform: skewX(-8deg);
+            display: inline-block;
+          }
+
           @keyframes marquee {
             from { transform: translateX(0); }
             to { transform: translateX(-50%); }
           }
         `}
       </style>
-
     </section>
   );
 }
 
 function ReviewPill({ name, stars, text }) {
   return (
-    <div
-      className="
+    <div className="
         shrink-0
-
         w-[320px] sm:w-[480px] lg:w-[560px]
         min-h-[190px] sm:min-h-[210px]
-
         rounded-[32px] sm:rounded-[44px]
         bg-black
-
         px-6 sm:px-10
         py-8 sm:py-10
-
         border-2 border-white
-
         shadow-[inset_0_0_0_1px_rgba(255,255,255,0.06),_0_20px_60px_rgba(0,0,0,0.9)]
-
         flex flex-col justify-between
-
         transition-transform duration-300 ease-out
         hover:-translate-y-1
       "
     >
       {/* Header */}
       <div className="flex items-start justify-between mb-4">
-        <h4 className="text-lg sm:text-[26px] font-semibold text-white">
+        <h4 className="text-lg sm:text-[26px] font-semibold text-white font-base incline-text">
           {name}
         </h4>
 
         <div className="flex gap-1 text-lg sm:text-[22px] leading-none">
           {[...Array(5)].map((_, i) => (
-            <span
-              key={i}
-              className={i < stars ? "text-yellow-400" : "text-gray-600"}
-            >
+            <span key={i} className={i < stars ? "text-yellow-400" : "text-gray-600"}>
               ★
             </span>
           ))}
@@ -141,7 +132,7 @@ function ReviewPill({ name, stars, text }) {
       </div>
 
       {/* Text */}
-      <p className="text-gray-300 text-sm sm:text-[17px] leading-relaxed max-w-[480px]">
+      <p className="text-gray-300 text-sm sm:text-[17px] leading-relaxed max-w-[480px] font-alt incline-text">
         {text}
       </p>
     </div>

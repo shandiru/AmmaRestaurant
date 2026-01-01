@@ -43,13 +43,7 @@ export default function AboutScrollSection() {
             <div className="relative w-full lg:w-2/3 h-[70vh]">
               <div
                 ref={img1Ref}
-                className="
-                  absolute inset-0
-                  rounded-[36px]
-                  border-2 border-white
-                  overflow-hidden
-                  will-change-transform
-                "
+                className="absolute inset-0 rounded-[36px] border-2 border-white overflow-hidden will-change-transform"
               >
                 <img
                   src="https://cdn.prod.website-files.com/6410dee2412dc599c7e61e0b/6423379bb18b6ca4aa4d4722_about1.jpg"
@@ -61,10 +55,10 @@ export default function AboutScrollSection() {
 
             {/* TEXT */}
             <div className="w-full lg:w-1/3 relative z-20">
-              <h2 className="text-6xl lg:text-7xl font-bold mb-6 uppercase">
+              <h2 className="text-6xl lg:text-7xl font-bold mb-6 uppercase font-base incline-text">
                 Who <br /> We Are
               </h2>
-              <p className="text-gray-300 text-lg leading-relaxed">
+              <p className="text-gray-300 text-lg leading-relaxed font-alt incline-text">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                 sed do eiusmod tempor incididunt ut labore.
               </p>
@@ -81,13 +75,7 @@ export default function AboutScrollSection() {
             <div className="relative w-full lg:w-2/3 h-[70vh]">
               <div
                 ref={img2Ref}
-                className="
-                  absolute inset-0
-                  rounded-[36px]
-                  border-2 border-white
-                  overflow-hidden
-                  will-change-transform
-                "
+                className="absolute inset-0 rounded-[36px] border-2 border-white overflow-hidden will-change-transform"
               >
                 <img
                   src="https://cdn.prod.website-files.com/6410dee2412dc599c7e61e0b/6423379ff8be2448d15a6448_about2.jpg"
@@ -99,10 +87,10 @@ export default function AboutScrollSection() {
 
             {/* TEXT */}
             <div className="w-full lg:w-1/3 relative z-20">
-              <h2 className="text-6xl lg:text-7xl font-bold mb-6 uppercase">
+              <h2 className="text-6xl lg:text-7xl font-bold mb-6 uppercase font-base incline-text">
                 What <br /> We Do
               </h2>
-              <p className="text-gray-300 text-lg leading-relaxed">
+              <p className="text-gray-300 text-lg leading-relaxed font-alt incline-text">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                 sed do eiusmod tempor incididunt ut labore.
               </p>
@@ -110,6 +98,32 @@ export default function AboutScrollSection() {
           </div>
         </div>
       </div>
+
+      {/* ===== FONTS + INCLINE ===== */}
+      <style>
+        {`
+          @import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@600;700&family=Open+Sans:wght@400;500&display=swap');
+
+          :root {
+            --font-base: 'Cormorant Upright', serif;
+            --font-alt: 'Open Sans', sans-serif;
+          }
+
+          .font-base {
+            font-family: var(--font-base);
+          }
+
+          .font-alt {
+            font-family: var(--font-alt);
+          }
+
+          /* Incline effect */
+          .incline-text {
+            transform: skewX(-8deg);
+            display: inline-block;
+          }
+        `}
+      </style>
     </section>
   );
 }
